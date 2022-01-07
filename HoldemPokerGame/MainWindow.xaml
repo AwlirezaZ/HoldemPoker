@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:HoldemPokerGame"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Black">
+        <Button Content="Start Game!" HorizontalAlignment="Left" Margin="310,183,0,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.5,0.5" Height="50" Background="#FF00BF9C" Click="StartGameClicked">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.15"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="HOLDEM POKER GAME" Foreground="#FF00BF9C" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="197,98,0,0" Width="393" FontSize="36"/>
+
     </Grid>
 </Window>

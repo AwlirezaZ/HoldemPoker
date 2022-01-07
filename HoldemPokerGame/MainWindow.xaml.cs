@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HoldemPokerGame.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace HoldemPokerGame
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void StartGameClicked(object sender, RoutedEventArgs e)
+        {
+            var playersManagementWindow = new PlayersManagement();
+            this.Close();
+            playersManagementWindow.Show();
         }
     }
 }
