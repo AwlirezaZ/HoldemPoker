@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HoldemPokerGame.Windows"
         mc:Ignorable="d"
-        Title="Players Management" Height="450" Width="800">
-    <Grid Background="Black">
-        
-    </Grid>
+        Title="Players Management" Height="366.241" Width="351.487" Background="Black">
+    <Window.Resources>
+        <Style x:Key="DGHeaderStyle" TargetType="{x:Type DataGrid}">
+            <Setter Property="ColumnHeaderStyle" Value="{DynamicResource DGCHeaderStyle}"/>
+        </Style>
+        <Style x:Key="DGCHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Cyan" />
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontFamily" Value="Calibri" />
+        </Style>
+    </Window.Resources>
+        <Grid Background="Black" Margin="0,0,200,0">
+            <DataGrid Name="PlayersDG"  Style="{DynamicResource DGHeaderStyle}" HorizontalAlignment="Left" Height="145" Margin="31,90,-162,0" VerticalAlignment="Top" Width="272" Background="#FF040404" SelectionChanged="DataGrid_SelectionChanged" Foreground="#FF03C7A3" BorderBrush="#FF00C1C1" OpacityMask="#FFFF0606">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Counter"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Player Name"></DataGridTextColumn>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
 </Window>
